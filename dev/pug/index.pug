@@ -1,0 +1,28 @@
+doctype html
+html(lang='ru-RU')
+  head
+    link(rel='stylesheet' href='./assets/css/main.css')
+    title My test page
+  body
+    .container
+        .widget
+            .widget__title
+                svg.widget__title-icon
+                    use(xlink:href="./assets/images/svg/symbol/sprite.svg#sheet")
+                h2.widget__title-text Counting | Distance profit
+            .widget__content
+                .input__wrap
+                    label.input__label Rise
+                    input(id="rise" placeholder="0,01 - ()").input
+                .input__wrap
+                    label.input__label Probability
+                    input(id="probability" placeholder="0,05 - 99,95").input
+                .input__wrap
+                    label.input__label Percentage
+                    input(id="percentage" placeholder="0,01 - 100").input
+                .separator
+                .input__wrap
+                    label.input__label Profit
+                    input(id="profit" placeholder="Your profit").input
+
+  script(src="assets/js/main.js")

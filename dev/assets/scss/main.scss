@@ -1,0 +1,8 @@
+@import 'libs.scss';
+@import '_variables.scss';
+
+body {
+  font-family: 'Open Sans', sans-serif, --apple-system;
+}
+
+@import 'widget';
