@@ -12,28 +12,28 @@ html(lang='ru-RU')
                 h2.widget__title-text Distance profit
             form(id="distance-form").widget__content.widget-distance__form
                 .input__wrap
-                    input(id="amount" name="amount" placeholder="1 - ()").input
+                    input(id="amount" type="number" name="amount" placeholder="1 - ()").input
                     label.input__label Amount
                     svg.input__icon
                         use(xlink:href="./assets/images/svg/symbol/sprite.svg#warning")
                 .input__wrap
-                    input(id="rise" name="rise" placeholder="0.01 - ()").input
+                    input(id="rise" type="number" name="rise" placeholder="0.01 - ()").input
                     label.input__label Rise
                     svg.input__icon
                         use(xlink:href="./assets/images/svg/symbol/sprite.svg#warning")
                 .input__wrap
-                    input(id="probability" name="probability" placeholder="0.05 - 99.95").input
+                    input(id="probability" type="number" name="probability" placeholder="0.05 - 99.95").input
                     label.input__label Probability
                     svg.input__icon
                         use(xlink:href="./assets/images/svg/symbol/sprite.svg#warning")
                 .input__wrap
-                    input(id="percentage" name="percentage" placeholder="0.01 - 100").input
+                    input(id="percentage" type="number" name="percentage" min="0.01" max="100" placeholder="0.01 - 100").input
                     label.input__label Percentage
                     svg.input__icon
                         use(xlink:href="./assets/images/svg/symbol/sprite.svg#warning")
                 .widget__separator
                 .input__wrap.input__wrap_accent
                     label.input__label Profit
-                    input(id="profit" name="profit" placeholder="Your profit" disabled).input
+                    input(id="profit" type="text" name="profit" placeholder="Your profit" disabled).input
 
   script(src="assets/js/main.js")
