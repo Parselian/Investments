@@ -1,0 +1,78 @@
+.input {
+  &__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    &_error {
+      .input {
+        &__label {
+          color: $error-color;
+        }
+        color: $error-color;
+        border-color: $error-color;
+        &__icon {
+          display: block;
+        }
+      }
+    }
+    &_active {
+      .input {
+        &__label {
+          color: $active-color;
+        }
+        color: $active-color;
+      }
+    }
+    &_accent {
+      .input {
+        &__label {
+          color: $accent-input-color;
+        }
+        font-weight: 600;
+        color: $alt-text-color;
+        background-color: $accent-input-color;
+        border-color: $accent-input-color;
+        &:focus {
+          border-color: $accent-input-color
+        }
+        &::placeholder {
+          color: $alt-text-color;
+        }
+      }
+    }
+
+  }
+  &__label {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $border-color;
+    text-transform: uppercase;
+    order: -1;
+  }
+
+  padding: 13px 13px 10px 17px;
+  font-size: 16px;
+  border: 2px solid $border-color;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  &:focus {
+    border-color: $active-color;
+    color: $active-color;
+    & ~ label {
+      color: $active-color;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    display: none;
+    width: 15px;
+    height: 15px;
+  }
+}

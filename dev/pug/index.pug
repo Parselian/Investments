@@ -5,24 +5,35 @@ html(lang='ru-RU')
     title My test page
   body
     .container
-        .widget
+        .widget.widget-distance
             .widget__title
                 svg.widget__title-icon
                     use(xlink:href="./assets/images/svg/symbol/sprite.svg#sheet")
-                h2.widget__title-text Counting | Distance profit
-            .widget__content
+                h2.widget__title-text Distance profit
+            form(id="distance-form").widget__content.widget-distance__form
                 .input__wrap
+                    input(id="amount" name="amount" placeholder="1 - ()").input
+                    label.input__label Amount
+                    svg.input__icon
+                        use(xlink:href="./assets/images/svg/symbol/sprite.svg#warning")
+                .input__wrap
+                    input(id="rise" name="rise" placeholder="0.01 - ()").input
                     label.input__label Rise
-                    input(id="rise" placeholder="0,01 - ()").input
+                    svg.input__icon
+                        use(xlink:href="./assets/images/svg/symbol/sprite.svg#warning")
                 .input__wrap
+                    input(id="probability" name="probability" placeholder="0.05 - 99.95").input
                     label.input__label Probability
-                    input(id="probability" placeholder="0,05 - 99,95").input
+                    svg.input__icon
+                        use(xlink:href="./assets/images/svg/symbol/sprite.svg#warning")
                 .input__wrap
+                    input(id="percentage" name="percentage" placeholder="0.01 - 100").input
                     label.input__label Percentage
-                    input(id="percentage" placeholder="0,01 - 100").input
-                .separator
-                .input__wrap
+                    svg.input__icon
+                        use(xlink:href="./assets/images/svg/symbol/sprite.svg#warning")
+                .widget__separator
+                .input__wrap.input__wrap_accent
                     label.input__label Profit
-                    input(id="profit" placeholder="Your profit").input
+                    input(id="profit" name="profit" placeholder="Your profit" disabled).input
 
   script(src="assets/js/main.js")
