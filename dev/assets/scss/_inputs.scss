@@ -24,7 +24,7 @@
         color: $active-color;
       }
     }
-    &_accent {
+    &_positive {
       .input {
         &__label {
           color: $accent-input-color;
@@ -41,7 +41,23 @@
         }
       }
     }
-
+    &_negative {
+      .input {
+        &__label {
+          color: $error-color;
+        }
+        font-weight: 600;
+        color: $alt-text-color;
+        background-color: $error-color;
+        border-color: $error-color;
+        &:focus {
+          border-color: $error-color
+        }
+        &::placeholder {
+          color: $alt-text-color;
+        }
+      }
+    }
   }
   &__label {
     margin-bottom: 5px;
